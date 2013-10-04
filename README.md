@@ -1,4 +1,4 @@
 wiijoker
 ========
 
-Wii emulator
+Wii emulator (written in C++)
