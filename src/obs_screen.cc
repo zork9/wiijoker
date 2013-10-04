@@ -13,11 +13,32 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#include "fb.h"
+#include "obs_screen.h"
 
-int main(int argc, char *argv[])
+template<typename C, typename OC>
+ScreenObserver<C,OC>::ScreenObserver() 
+
+	: _queue()
+
 {
 
-	return 0;
+}
+
+template<typename C, typename OC>
+ScreenObserver<C,OC>::ScreenObserver(C const& c) 
+{
+	this.c = set(c);
+}
+
+template<typename C, typename OC>
+ScreenObserver<C,OC>::~ScreenObserver() 
+{
+
+}
+
+template<typename C, typename OC>
+void ScreenObserver<C,OC>::add(C const& c)
+{
+	this._queue.push_back(const_cast<C>(c));
 }
 

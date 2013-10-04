@@ -13,11 +13,23 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#include "fb.h"
+#include "obs.h"
 
-int main(int argc, char *argv[])
+template<typename C>
+Observable<C>::Observable() 
 {
 
-	return 0;
+}
+
+template<typename C>
+Observable<C>::~Observable() 
+{
+
+}
+
+template<typename C>
+void Observable<C>::set(C const& c)
+{
+	this.c = const_cast<C&>(c);
 }
 

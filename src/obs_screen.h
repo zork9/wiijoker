@@ -13,11 +13,28 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#include "fb.h"
 
-int main(int argc, char *argv[])
+#ifndef _WII_OBS_SCREEN_H_
+#define _WII_OBS_SCREEN_H_
+
+#include <list>
+#include "obs.h"
+
+using namespace std;
+
+template<typename C, typename OC>
+class ScreenObserver : public Observer<OC> 
 {
+	public:
+	ScreenObserver();
+	ScreenObserver(C const& c);
+	virtual ~ScreenObserver();
 
-	return 0;
-}
+	public:
+	void add(C const& c);	
 
+	private:
+	list<C> _queue;
+};
+
+#endif

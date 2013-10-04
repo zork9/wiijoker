@@ -13,11 +13,22 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#include "fb.h"
 
-int main(int argc, char *argv[])
+#ifndef _WII_OBS2_H_
+#define _WII_OBS2_H_
+
+template<typename C>
+class Observable 
 {
+	public:
+	Observable();
+	virtual ~Observable();
 
-	return 0;
-}
+	public:
+	void set(C const& c);	
 
+	private:
+	C& c;
+};
+
+#endif
