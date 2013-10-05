@@ -13,23 +13,25 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#include "obs2.h"
+
+#ifndef _WII_REG_H_
+#define _WII_REG_H_
+
+#include "types_int.h"
 
 template<typename C>
-Observable<C>::Observable() 
+class Register
 {
+	public:
+	Register();
+	Register(C const& c);
+	virtual ~Register();
 
-}
+	public:
 
-template<typename C>
-Observable<C>::~Observable() 
-{
+	private:
 
-}
+	C _code;
+};
 
-template<typename C>
-void Observable<C>::set(C const& c)
-{
-	this.c = const_cast<C&>(c);
-}
-
+#endif

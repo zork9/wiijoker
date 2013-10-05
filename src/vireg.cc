@@ -13,23 +13,25 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#include "obs2.h"
+#include "vireg.h"
+#include "types_int.h"
 
 template<typename C>
-Observable<C>::Observable() 
+VideoRegister<C>::VideoRegister() 
+	: _code(WII_MIN_INT)
 {
 
 }
 
 template<typename C>
-Observable<C>::~Observable() 
+VideoRegister<C>::VideoRegister(C const& c) 
 {
-
+	this._code = const_cast<C>(c);
 }
 
 template<typename C>
-void Observable<C>::set(C const& c)
+VideoRegister<C>::~VideoRegister() 
 {
-	this.c = const_cast<C&>(c);
+
 }
 

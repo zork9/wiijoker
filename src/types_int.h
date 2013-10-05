@@ -17,8 +17,15 @@
 #ifndef _WII_INT_TYPES_H_
 #define _WII_INT_TYPES_H_
 
+/* integer types */
+
 typedef int uint32;
 typedef int uint16;
 typedef int uint8;
+
+/* useable integer types and forms */
+
+typedef uint32 uint;
+enum { WII_MIN_INT = 0x00000000, };
 
 #endif
