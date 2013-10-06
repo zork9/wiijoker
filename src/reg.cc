@@ -16,20 +16,20 @@
 #include "reg.h"
 
 template<typename C>
-Register<C>::Register() 
+reg<C>::reg() 
 	: _code(WII_MIN_INT)
 {
 
 }
 
 template<typename C>
-Register<C>::Register(C const& c) 
+reg<C>::reg(C const& c) 
 {
 	this._code = const_cast<C>(c);
 }
 
 template<typename C>
-Register<C>::~Register() 
+reg<C>::~reg() 
 {
 
 }

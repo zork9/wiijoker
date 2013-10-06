@@ -20,12 +20,12 @@
 #include "types_int.h"
 
 template<typename C>
-class Register
+class reg
 {
 	public:
-	Register();
-	Register(C const& c);
-	virtual ~Register();
+	reg();
+	reg(C const& c);
+	virtual ~reg();
 
 	public:
 

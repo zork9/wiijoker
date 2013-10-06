@@ -17,20 +17,20 @@
 #include "types_int.h"
 
 template<typename C>
-VideoRegister<C>::VideoRegister() 
+vireg<C>::vireg() 
 	: _code(WII_MIN_INT)
 {
 
 }
 
 template<typename C>
-VideoRegister<C>::VideoRegister(C const& c) 
+vireg<C>::vireg(C const& c) 
 {
 	this._code = const_cast<C>(c);
 }
 
 template<typename C>
-VideoRegister<C>::~VideoRegister() 
+vireg<C>::~vireg() 
 {
 
 }

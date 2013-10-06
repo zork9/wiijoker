@@ -20,12 +20,12 @@
 #include "types_int.h"
 
 template<typename C>
-class VideoRegister
+class vireg
 {
 	public:
-	VideoRegister();
-	VideoRegister(C const& c);
-	virtual ~VideoRegister();
+	vireg();
+	vireg(C const& c);
+	virtual ~vireg();
 
 	public:
 
