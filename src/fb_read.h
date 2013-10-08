@@ -18,12 +18,12 @@
 #define _WII_FB_TYPES_H_
 #include "types_int.h"
 
-typedef (uint32*) __fb_t;
+typedef (uint32*) fb_t;
 
 /* FIXME latches hex definition still incorrect */
 
-#define FB0 ((__fb_t)0x00ff00ff);
-#define FB1 ((__fb_t)0x00ff00ff+1);
+#define FB0 ((fb_t)0x00ff00ff);
+#define FB1 ((fb_t)0x00ff00ff+1);
 
 
 #endif
