@@ -16,10 +16,9 @@
 #include "fb.h"
 
 template<typename DPY>
-FB<DPY>::FB() 
-{
-
-}
+FB<DPY>::FB(DPY const& fbn) 
+	: _fb(&fbn)
+{}
 
 template<typename DPY>
 FB<DPY>::~FB() 

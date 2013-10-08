@@ -23,11 +23,13 @@ template<typename DPY>
 class FB
 {
 	public:
-	FB();
+	explicit FB(DPY const& _fbn);
 	virtual ~FB();
 
 	public:
-	
+
+	private:
+	DPY *_fb;	
 };
 
 #endif
